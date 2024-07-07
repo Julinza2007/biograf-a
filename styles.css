@@ -1,0 +1,71 @@
+h1, h2{
+    font-family: sans-serif;
+    text-align: center;
+}
+h1{
+    font-size: 2.5em;
+}
+
+div#btn{
+    text-align: center;
+}
+
+div#btn button{
+    font-size: 1.25em;
+    background-color: skyblue;
+    font-weight: bold;
+    
+}
+
+p{
+    font-size: 1.5em;
+}
+
+.btnContinuar{
+    font-size: 1em;
+    background-color: greenyellow;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.pregunta{
+    background-color: yellow;
+    border: 10px ridge blue;
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 1.25em;
+    text-align: center;
+    
+}
+
+div#botones{
+    text-align: center;
+}
+div#botones .btnPreg{
+    font-size: 1em;
+    background-color: salmon;
+    font-weight: bold;
+    margin-left: 30px;
+    box-shadow: 1px 1px 3px blue;
+}
+
+p#resultado{
+    text-align:center;
+}
+
+div#videoContainer{
+    text-align: center;
+}
+
+div#botonesColor{
+    text-align: center;    
+}
+
+div#botonesColor .btnPreg2{
+    font-size: 1em;
+    background-color: salmon;
+    font-weight: bold;
+    margin-left: 30px;
+    box-shadow: 1px 1px 3px blue;
+}
