@@ -6,6 +6,8 @@ h1{
     font-size: 2.5em;
 }
 
+
+
 div#btn{
     text-align: center;
 }
@@ -13,12 +15,14 @@ div#btn{
 div#btn button{
     font-size: 1.25em;
     background-color: skyblue;
-    font-weight: bold;
-    
+    font-weight: bold;   
+}
+p#parrafoBiogra{
+    font-size:1.3em;
 }
 
-p{
-    font-size: 1.5em;
+p.parrafos{
+    font-size:1.25em;
 }
 
 .btnContinuar{
@@ -34,15 +38,14 @@ p{
     border-radius: 10px;
     margin-left: 300px;
     margin-right: 300px;
-    font-size: 1.25em;
+    font-size: 2.2em;
     text-align: center;
-    
 }
 
 div#botones{
     text-align: center;
 }
-div#botones .btnPreg{
+.btnPreg{
     font-size: 1em;
     background-color: salmon;
     font-weight: bold;
@@ -64,8 +67,12 @@ div#botonesColor{
 
 .btnPreg2{
     font-size: 1em;
-    background-color: salmon;
+    background-color: rgb(146, 146, 255);
     font-weight: bold;
     margin-left: 30px;
     box-shadow: 1px 1px 3px blue;
+}
+
+p#resultadoColor{
+    text-align:center;
 }
