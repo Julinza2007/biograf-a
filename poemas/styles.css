@@ -1,0 +1,18 @@
+div#centrar{
+    margin: 0 auto;
+}
+pre{
+    font-size: 1.5em;
+    font-family: sans-serif;
+    background-color: rgb(119, 119, 255);
+    margin: 0px 500px 10px 550px;
+    border-radius: 20px;
+}
+
+pre span.titulos{
+    text-align: center;
+    border-radius:8px;
+    background-color: gold;
+    box-shadow: 3px 4px 3px red;
+    font-weight: bold;
+}

@@ -89,7 +89,7 @@ document.addEventListener('click', handleClick);
                     document.querySelector('#botonesColor').remove();
                     let imagen = document.querySelector('#imagen');
                     imagen.style.textAlign= "center";
-                    imagen.innerHTML= '<p class="parrafos">Ese soy yo</p><img src="YO.jpg" widht="300px" height="160px">';
+                    imagen.innerHTML= '<p class="parrafos">Ese soy yo</p><a href="poemas/poemas.html"><img src="YO.jpg" widht="300px" height="160px"></a>';
                 } else{
                     resultadoColor.textContent = `MUY MAL FLACO encima te llamas ${name}, que nombre de pelotudo mamita querida. Me caes muy mal ahora, te odio.`;
                     document.querySelector('#botonesColor').remove();
