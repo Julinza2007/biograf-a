@@ -73,12 +73,10 @@ document.addEventListener('click', handleClick);
                         let resultadoColor = document.querySelector('#resultadoColor');
                         if(event.target.textContent == 'Azul'){
                             resultadoColor.textContent = `Muy bien, ${name}, ¿Cómo es que sabés tanto de mí? Nah mentira no sabés un carajo... Hay más cosas pero no puedo ponerlas acá...`;
-                        } else {
-                            resultadoColor.textContent = `Muy MAL FLACO encima te llamas ${name}, que nombre de pelotudo mamita querida. Me caes muy mal ahora, te odio.`;
+                        } else{
+                            resultadoColor.textContent = `MUY MAL FLACO encima te llamas ${name}, que nombre de pelotudo mamita querida. Me caes muy mal ahora, te odio.`;
                         }
-                        event.target.remove(); // Add this line to remove the button
                     }
-
                 } else {
                     let videoContainer = document.querySelector('#videoContainer');
                     videoContainer.innerHTML = '';

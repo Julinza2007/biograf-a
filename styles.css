@@ -62,7 +62,7 @@ div#botonesColor{
     text-align: center;    
 }
 
-div#botonesColor .btnPreg2{
+.btnPreg2{
     font-size: 1em;
     background-color: salmon;
     font-weight: bold;
