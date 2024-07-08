@@ -176,4 +176,9 @@ text-align:center;
     .btnReset {
         font-size: 1em;
     }
+
+    div#container-img img{
+     width: 400px;
+     height: 400px;
+    }
 }
