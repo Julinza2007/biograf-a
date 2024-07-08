@@ -1,7 +1,9 @@
-div#centrar{
+/* Estilos generales */
+div#centrar {
     margin: 0 auto;
 }
-pre{
+
+pre {
     font-size: 1.5em;
     font-family: sans-serif;
     background-color: rgb(119, 119, 255);
@@ -9,10 +11,26 @@ pre{
     border-radius: 20px;
 }
 
-pre span.titulos{
+pre span.titulos {
     text-align: center;
-    border-radius:8px;
+    border-radius: 8px;
     background-color: gold;
     box-shadow: 3px 4px 3px red;
     font-weight: bold;
+}
+
+/* Media Queries para ajustes en pantallas pequeñas */
+
+@media (max-width: 768px) {
+    pre {
+        font-size: 1.2em;
+        margin: 0px 50px 10px 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    pre {
+        font-size: 1em;
+        margin: 0px 20px 10px 50px;
+    }
 }
