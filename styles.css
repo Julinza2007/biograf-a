@@ -21,8 +21,8 @@ p#parrafoBiogra{
     font-size:1.3em;
 }
 
-p.parrafos{
-    font-size:1.25em;
+.parrafos{
+    font-size:1.5em;
 }
 
 .btnContinuar{
@@ -36,8 +36,8 @@ p.parrafos{
     background-color: yellow;
     border: 10px ridge blue;
     border-radius: 10px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 150px;
+    margin-right: 150px;
     font-size: 2.2em;
     text-align: center;
 }
@@ -75,4 +75,102 @@ div#botonesColor{
 
 p#resultadoColor{
     text-align:center;
+}
+
+div#reset{
+margin-top: 20px;
+text-align: center;
+}
+
+.btnReset{
+    font-size: 1.5em;
+    background-color: orangered;
+    font-weight: bold;
+
+    box-shadow: 2px 1px 3px lime;
+    text-align: center;
+}
+
+div#secreto{
+    text-align: center;
+}
+
+.secret{
+    font-size: 0.6em;
+    background: gray;
+    border-radius: 10px;
+}
+
+div#container-img{
+text-align:center;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 6px white;
+    animation: twinkle 1s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 1; }
+    to { opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .pregunta {
+        font-size: 1.8em;
+        margin: 0 50px;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    .parrafos {
+        font-size: 1.3em;
+    }
+
+    .btnReset {
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .pregunta {
+        font-size: 1.5em;
+        margin: 0 20px;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+
+    .parrafos {
+        font-size: 1.1em;
+    }
+
+    .btnReset {
+        font-size: 1em;
+    }
 }
