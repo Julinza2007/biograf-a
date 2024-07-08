@@ -108,6 +108,17 @@ div#container-img{
 text-align:center;
 }
 
+#castillo_flotante img {
+    width: 50%; /* Ajusta según tus necesidades */
+    height: 50%; /* Ajusta según tus necesidades */
+  }
+  
+  .imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .star {
     position: absolute;
     width: 2px;

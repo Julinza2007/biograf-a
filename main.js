@@ -112,7 +112,7 @@ function handleClick(event){
 
     if(event.target.classList.contains('secret')){
         if(event.target.textContent == '?'){
-            document.body.innerHTML = `<h1>¿ESTOY ENAMORADO? Si, de vos ${name}</h1> <div id="container-img"><a href="poemas/poemas.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" width="500px" height="525px"></a></div>`;
+            document.body.innerHTML = `<h1>¿ESTOY ENAMORADO? Si, de vos ${name}</h1> <div id="container-img"><a href="poemas/poemas.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" width="500px" height="525px"></a></div><div id="castillo_flotante"><div class="imagen-contenedor"><img src="aincrad.png"></div></div>`;
             createStars(100); // Llama a la función para crear 100 estrellas
         }
     }
