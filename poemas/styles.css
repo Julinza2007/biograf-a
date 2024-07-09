@@ -3,12 +3,17 @@ div#centrar {
     margin: 0 auto;
 }
 
+*{
+    font-family: sans-serif;
+}
+
 pre {
     font-size: 1.5em;
     font-family: sans-serif;
     background-color: rgb(119, 119, 255);
-    margin: 0px 100px 10px 300px;
+    margin: 30px 250px 0px 250px;
     border-radius: 20px;
+    box-shadow: 4px 4px 5px black;
 }
 
 pre span.titulos {
@@ -17,6 +22,7 @@ pre span.titulos {
     background-color: gold;
     box-shadow: 3px 4px 3px red;
     font-weight: bold;
+    padding: 2px;
 }
 
 /* Media Queries para ajustes en pantallas pequeñas */
@@ -30,6 +36,7 @@ pre span.titulos {
 
 @media (max-width: 480px) {
     pre {
-        font-size: 0.9em;
-        margin: 20px 20px 0px 20px;
+        font-size: 0.68em;
+        margin: 20px 0px 0px 0px;
     }
+}
