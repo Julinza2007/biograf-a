@@ -63,6 +63,10 @@ p#resultado{
 div#videoContainer{
     text-align: center;
 }
+div#videoContainer iframe{
+    width: 600px;
+    height: 400px;
+}
 
 div#botonesColor{
     text-align: center;    
@@ -107,7 +111,9 @@ div#secreto{
 div#container-img{
 text-align:center;
 }
-
+ div#castillo_flotante{
+        margin-top: 270px;
+    }
 #castillo_flotante img {
     width: 50%; /* Ajusta según tus necesidades */
     height: 50%; /* Ajusta según tus necesidades */
@@ -164,32 +170,62 @@ text-align:center;
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     h2 {
         font-size: 1.2em;
     }
 
-    .pregunta {
-        font-size: 1.5em;
-        margin: 0 20px;
+    p#parrafoBiogra{
+        font-size:0.7em;
     }
 
-    button {
+    .pregunta {
         font-size: 0.8em;
+        margin: 0 20px;
+        padding: 10px;
     }
+
+    .btnPreg{
+    font-size: 0.6em;
+    margin-left: 20px;
+}
+
+    .btnPreg2{
+    font-size: 0.6em;
+    margin-left: 20px;
+}
 
     .parrafos {
-        font-size: 1.1em;
+        font-size: 0.7em;
     }
+
+    div#imagen img{
+        width: 215px;
+        height: 200px
+    }
+
+    div#videoContainer iframe{
+    width: 425px;
+    height: 250px;
+}
 
     .btnReset {
         font-size: 1em;
     }
 
-    div#container-img img{
-     width: 400px;
-     height: 400px;
+    div#container-img{
+     margin: 0 auto;
     }
+
+    div#container-img img{
+     width: 320px;
+     height: 320px;
+    }
+
+     div#castillo_flotante{
+        margin-top: 285px;
+    }
+   
 }

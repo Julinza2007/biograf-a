@@ -48,7 +48,7 @@ function handleClick(event){
         if (event.target.textContent == 'Julio') {
             resultado.textContent = `La respuesta es correcta!!! dame un besito. Nah mentira me gustan las mujeres.`;
             let videoContainer = document.querySelector('#videoContainer');
-            videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/IMfAOTmnyp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            videoContainer.innerHTML = '<iframe src="https://www.youtube.com/embed/IMfAOTmnyp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
             document.querySelector('#botones').remove();
 
             let contenedorBtnsColores= document.querySelector('#botonesColor');
