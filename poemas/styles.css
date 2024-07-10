@@ -3,12 +3,17 @@ div#centrar {
     margin: 0 auto;
 }
 
+*{
+    font-family: sans-serif;
+}
+
 pre {
     font-size: 1.5em;
     font-family: sans-serif;
     background-color: rgb(119, 119, 255);
-    margin: 0px 100px 10px 300px;
+    margin: 30px 250px 0px 250px;
     border-radius: 20px;
+    box-shadow: 4px 4px 5px black;
 }
 
 pre span.titulos {
@@ -17,7 +22,47 @@ pre span.titulos {
     background-color: gold;
     box-shadow: 3px 4px 3px red;
     font-weight: bold;
+    padding: 2px;
 }
+
+button#explicacion{
+    margin: 50px 0px 0px 265px;
+    padding: 1em;
+    background: orangered;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px blueviolet;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 350px 0px 350px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background: gold;
+    box-shadow: 4px 4px 5px gray;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 20px 475px 0px 475px;
+    border: 5px solid black;
+    border-radius: 10px;
+    background: skyblue;
+    box-shadow: 4px 4px 5px gray;
+    font-weight: bold;
+  }
+
+  p {
+    background: limegreen;
+    border-radius: 5px;
+    font-size: 1.25em;
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+  }
+
 
 /* Media Queries para ajustes en pantallas pequeñas */
 
@@ -30,6 +75,27 @@ pre span.titulos {
 
 @media (max-width: 480px) {
     pre {
-        font-size: 0.9em;
-        margin: 20px 20px 0px 20px;
+        font-size: 0.68em;
+        margin: 20px 0px 0px 0px;
     }
+
+    button#explicacion{
+        font-size: 0.5em;
+        margin: 20px 0px 0px 20px;
+        border-radius: 5px;
+    }
+    h1 {
+        margin: 10px 0px 0px 0px;
+        font-size: 1.25em;
+      }
+
+      h2 {
+        margin: 10px 50px 0px 50px;
+        font-size: 0.8em;
+      }
+
+      p {
+           font-size: 0.5em;
+          }
+    }
+}
