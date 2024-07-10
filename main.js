@@ -131,16 +131,33 @@ function handleClick(event){
     }
 
     if(event.target.classList.contains('btnPreg3')){
-
         document.querySelector('#botonesComida').remove();
-        let reset = document.createElement('button');
-        reset.textContent= 'RESETEAR TODO';
-        reset.classList.add('btnReset');
-        document.querySelector('#reset').append(reset);
-
         let resultadoComida = document.querySelector('#resultadoComida');
         if(event.target.textContent == 'Fideos'){
             resultadoComida.textContent= `Que locura ${name} adivinaste, espero que a vos también te gusten los fideos :)`;
+       
+            let contenedorBotonesPes = document.querySelector('#botonesPes');
+            let preg4= document.querySelector('#pregPes');
+            preg4.classList.add('pregunta');
+            preg4.textContent=`Esta es difícil... ${name}, ¿cuál es mi equipo favorito del PES 2009?`;
+
+            let boton1Pes = document.createElement('button');
+            let boton2Pes = document.createElement('button');
+            let boton3Pes = document.createElement('button');
+            let boton4Pes = document.createElement('button');
+            boton1Pes.textContent= 'Pes United';
+            boton2Pes.textContent= 'Manchester United';
+            boton3Pes.textContent= 'Le Mans';
+            boton4Pes.textContent= 'FC. Barcelona';   
+            boton1Pes.classList.add('btnPreg4');
+            boton2Pes.classList.add('btnPreg4');
+            boton3Pes.classList.add('btnPreg4');
+            boton4Pes.classList.add('btnPreg4');
+            contenedorBotonesPes.append(boton1Pes);     
+            contenedorBotonesPes.append(boton2Pes);
+            contenedorBotonesPes.append(boton3Pes);
+            contenedorBotonesPes.append(boton4Pes);
+
         }
         else if(event.target.textContent == 'Milanesa'){
             resultadoComida.textContent= `Te vas a sorprender ${name}... No me gusta la milanesa, para mi suerte ahora la tolero pero de chiquito no la soportaba.`;
@@ -151,6 +168,30 @@ function handleClick(event){
         else if(event.target.textContent == 'Asado'){
             resultadoComida.textContent= `Buena comida ${name}, además es riquisimo el asado, pero no es mi comida favorita porque no lo como frecuentemente... `;
         }
+    }
+
+    if(event.target.classList.contains('btnPreg4')){
+        let resultadoPes = document.querySelector('#resultadoPes');
+        document.querySelector('#botonesPes').remove();
+
+        let reset = document.createElement('button');
+        reset.textContent= 'RESETEAR TODO';
+        reset.classList.add('btnReset');
+        document.querySelector('#reset').append(reset);
+
+        if(event.target.textContent == 'Manchester United'){
+            resultadoPes.textContent= `FUAFUA, nah, sos una locura sinceramente... Muy pocas personas la pegaron todo a la primera (ESPERO QUE NO HAYAS HECHO TRAMPA ${name}).`;
+        }
+        else if(event.target.textContent == 'Pes United'){
+            resultadoPes.textContent= `Es el equipo default del PES pero no me gusta.`
+        }
+        else if(event.target.textContent == 'Le Mans'){
+            resultadoPes.textContent= `Si realmente creíste que este era mi equipo favorito... Es mí segundo equipo favorito. Lo siento ${name} :(`;
+        }
+        else if(event.target.textContent == 'FC. Barcelona'){
+            resultadoPes.textContent=  `Buen equipo, de chiquito lo usaba mucho en mis primeras etapas del pes, pero ya no lo uso más. No es mi favorito.`;
+        }
+
     }
 
     if(event.target.classList.contains('btnReset')){

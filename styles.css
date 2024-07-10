@@ -103,6 +103,22 @@ p#resultadoComida{
     text-align: center;
 }
 
+.btnPreg4{
+    font-size: 1em;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    margin-left: 30px;
+    box-shadow: 1px 1px 3px darkred;
+}
+
+div#botonesPes{
+    text-align: center;
+}
+
+p#resultadoPes{
+    text-align: center;
+}
+
 div#reset{
 margin-top: 20px;
 text-align: center;
@@ -130,7 +146,8 @@ div#secreto{
 div#container-img{
 text-align:center;
 }
- div#castillo_flotante{
+
+div#castillo_flotante{
         margin-top: 270px;
     }
 #castillo_flotante img {
