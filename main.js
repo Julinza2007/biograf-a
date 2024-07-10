@@ -84,28 +84,78 @@ function handleClick(event){
     }
 
     if(event.target.classList.contains('btnPreg2')){
+        document.querySelector('#botonesColor').remove()
         let resultadoColor = document.querySelector('#resultadoColor');
         if(event.target.textContent == 'Azul'){
             resultadoColor.textContent = `Muy bien, ${name}, ¿Cómo es que sabés tanto de mí? Nah mentira no sabés un carajo... Hay más cosas pero no puedo ponerlas acá...`;
-            document.querySelector('#botonesColor').remove();
             let imagen = document.querySelector('#imagen');
             imagen.style.textAlign= "center";
+            imagen.style.marginBottom= "40px";
             imagen.innerHTML= '<p class="parrafos">Ese soy yo</p><img src="YO.jpg" width="200px" height="190px"></a>';
 
+
+            let contenedorBtnsComida = document.querySelector('#botonesComida');
+            let preg3 = document.querySelector('#pregComida');
+            preg3.classList.add('pregunta');
+            preg3.textContent= `¿Cuál de estas es mi comida favorita? (muy polémico).`;
+
+            let boton1Comida = document.createElement('button');
+            let boton2Comida = document.createElement('button');
+            let boton3Comida = document.createElement('button');
+            let boton4Comida = document.createElement('button');
+            boton1Comida.textContent= 'Milanesa';
+            boton2Comida.textContent= 'Fideos';
+            boton3Comida.textContent= 'Pizza';
+            boton4Comida.textContent= 'Asado';
+            boton1Comida.classList.add('btnPreg3');
+            boton2Comida.classList.add('btnPreg3');
+            boton3Comida.classList.add('btnPreg3');
+            boton4Comida.classList.add('btnPreg3');
+            contenedorBtnsComida.append(boton1Comida);
+            contenedorBtnsComida.append(boton2Comida);
+            contenedorBtnsComida.append(boton3Comida);
+            contenedorBtnsComida.append(boton4Comida);
+
+            /* BOTÓN DE RESET VA SIEMPRE DESPUÉS DE CONTESTAR LA ÚLTIMA PREGUNTA
+            
             let reset = document.createElement('button');
             reset.textContent= 'RESETEAR TODO';
             reset.classList.add('btnReset');
             document.querySelector('#reset').append(reset);
 
+            */
+
         } else {
             resultadoColor.textContent = `MUY MAL FLACO encima te llamas ${name}, que nombre de pelotudo mamita querida. Me caes muy mal ahora, te odio.`;
-            document.querySelector('#botonesColor').remove();
+        }
+    }
+
+    if(event.target.classList.contains('btnPreg3')){
+
+        document.querySelector('#botonesComida').remove();
+        let reset = document.createElement('button');
+        reset.textContent= 'RESETEAR TODO';
+        reset.classList.add('btnReset');
+        document.querySelector('#reset').append(reset);
+
+        let resultadoComida = document.querySelector('#resultadoComida');
+        if(event.target.textContent == 'Fideos'){
+            resultadoComida.textContent= `Que locura ${name} adivinaste, espero que a vos también te gusten los fideos :)`;
+        }
+        else if(event.target.textContent == 'Milanesa'){
+            resultadoComida.textContent= `Te vas a sorprender ${name}... No me gusta la milanesa, para mi suerte ahora la tolero pero de chiquito no la soportaba.`;
+        }
+        else if(event.target.textContent == 'Pizza'){
+            resultadoComida.textContent= `Si ${name}, me gusta la pizza pero no para que sea mi comida favorita, me llena mucho y tiene que estar muy buena realmente, Además es demasiado cara.`;
+        }
+        else if(event.target.textContent == 'Asado'){
+            resultadoComida.textContent= `Buena comida ${name}, además es riquisimo el asado, pero no es mi comida favorita porque no lo como frecuentemente... `;
         }
     }
 
     if(event.target.classList.contains('btnReset')){
         if(event.target.textContent == 'RESETEAR TODO'){
-            document.querySelector('body').innerHTML= '<h1>Estoy re contra inspirado.</h1><h2>Por lo tanto voy a hacer alta pagina web con javascript.</h2><div id="btn"><button>Mi Biografia</button></div> <p id="parrafoBiogra" class="parrafos"></p> <p id="pregMes"></p> <div id="botones"></div><p id="resultado" class="parrafos"></p><div id="videoContainer"></div><p id="pregColor"></p><div id="botonesColor"></div><p id="resultadoColor" class="parrafos"></p><div id="imagen"></div><div id="reset"></div> <div id="secreto"><button class="secret">?</button></div>';
+            document.querySelector('body').innerHTML= '<h1>Estoy re contra inspirado.</h1><h2>Por lo tanto voy a hacer alta pagina web con javascript.</h2><div id="btn"><button>Mi Biografia</button></div> <p id="parrafoBiogra" class="parrafos"></p> <p id="pregMes"></p> <div id="botones"></div><p id="resultado" class="parrafos"></p><div id="videoContainer"></div><p id="pregColor"></p><div id="botonesColor"></div><p id="resultadoColor" class="parrafos"></p><div id="imagen"></div><div id="pregComida"></div><div id="botonesComida"></div><p id="resultadoComida" class="parrafos"></p><div id="reset"></div><div id="secreto"><button class="secret">?</button></div></div>';
             event.target.remove();
         }
     }
