@@ -1,3 +1,23 @@
+@keyframes changeBackgroundColor {
+    0%   { background-color: rgba(255, 88, 51, 0.585); }
+    12.5% { background-color: rgba(255, 217, 0, 0.71); }
+    25%  { background-color: rgba(0, 255, 85, 0.543); }
+    37.5% { background-color: rgba(51, 102, 255, 0.525); }
+    50%  { background-color: rgba(153, 0, 255, 0.387); }
+    62.5% { background-color: rgba(255, 0, 153, 0.426); }
+    75%  { background-color: rgba(0, 255, 204, 0.573); }
+    87.5% { background-color: rgba(255, 166, 0, 0.606); }
+    100% { background-color: rgba(255, 88, 51, 0.559); }
+}
+
+body {
+    transition: background-color 10s ease-in-out;
+}
+
+body.startAnimation {
+    animation: changeBackgroundColor 20s infinite;
+}
+
 *{
     font-family: sans-serif
 }
@@ -103,12 +123,21 @@ p#resultadoComida{
     text-align: center;
 }
 
-.btnPreg4{
+.btnPreg4 {
     font-size: 1em;
-    background-color: cornflowerblue;
+    background-color: rgb(146, 146, 255);
     font-weight: bold;
     margin-left: 30px;
     box-shadow: 1px 1px 3px darkred;
+    transition: background-color 1s ease-in-out;
+}
+
+.btnPreg4:hover {
+    background-color: rgb(255, 146, 146);
+}
+
+button{
+    cursor: pointer;
 }
 
 div#botonesPes{
@@ -128,7 +157,6 @@ text-align: center;
     font-size: 1.5em;
     background-color: orangered;
     font-weight: bold;
-
     box-shadow: 2px 1px 3px lime;
     text-align: center;
 }
@@ -219,8 +247,9 @@ div#castillo_flotante{
 
     .pregunta {
         font-size: 0.7em;
-        margin: 0 20px;
-        padding: 10px;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     .btnPreg{
@@ -231,6 +260,16 @@ div#castillo_flotante{
     .btnPreg2{
     font-size: 0.6em;
     margin-left: 20px;
+}
+
+    .btnPreg3{
+    font-size: 0.6em;
+    margin-left: 20px;
+}
+
+.btnPreg4{
+    font-size: 0.6em;
+    margin-left: 10px;
 }
 
     .parrafos {

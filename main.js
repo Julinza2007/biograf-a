@@ -1,5 +1,6 @@
 document.addEventListener('click', handleClick);
 let name = prompt('Ingresa tu nombre porfa');
+let animationActive = false;
 
 function handleClick(event){
     if(event.target.textContent == 'Mi Biografia'){
@@ -9,7 +10,11 @@ function handleClick(event){
 
         let biografia = document.querySelector('#parrafoBiogra');
         biografia.textContent = `Hola Mí nombre es Julián Martín Linzalata. Bueno, el día de hoy que es: ${new Date().toLocaleDateString()}, estoy aquí para hacer cosas maravillosas como un breve cuestionario hacia usted. Sí, hacia usted ${name}.`;
-        document.body.style.backgroundColor = `rgba(129, 128, 127, 0.541)`;
+        
+        if(!animationActive){
+            document.body.classList.add('startAnimation');
+            animationActive = true;
+        }
 
         let preguntaBtn = document.createElement('button');
         preguntaBtn.textContent = 'Continuar...';
@@ -44,12 +49,12 @@ function handleClick(event){
     }
 
     if(event.target.classList.contains('btnPreg')){
+        document.querySelector('#botones').remove()
         let resultado = document.querySelector('#resultado');
         if (event.target.textContent == 'Julio') {
             resultado.textContent = `La respuesta es correcta!!! dame un besito. Nah mentira me gustan las mujeres.`;
             let videoContainer = document.querySelector('#videoContainer');
             videoContainer.innerHTML = '<iframe src="https://www.youtube.com/embed/IMfAOTmnyp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-            document.querySelector('#botones').remove();
 
             let contenedorBtnsColores= document.querySelector('#botonesColor');
             let preg2 = document.querySelector('#pregColor');
@@ -196,7 +201,7 @@ function handleClick(event){
 
     if(event.target.classList.contains('btnReset')){
         if(event.target.textContent == 'RESETEAR TODO'){
-            document.querySelector('body').innerHTML= '<h1>Estoy re contra inspirado.</h1><h2>Por lo tanto voy a hacer alta pagina web con javascript.</h2><div id="btn"><button>Mi Biografia</button></div> <p id="parrafoBiogra" class="parrafos"></p> <p id="pregMes"></p> <div id="botones"></div><p id="resultado" class="parrafos"></p><div id="videoContainer"></div><p id="pregColor"></p><div id="botonesColor"></div><p id="resultadoColor" class="parrafos"></p><div id="imagen"></div><div id="pregComida"></div><div id="botonesComida"></div><p id="resultadoComida" class="parrafos"></p><div id="reset"></div><div id="secreto"><button class="secret">?</button></div></div>';
+            document.querySelector('body').innerHTML= '<h1>Estoy re contra inspirado.</h1><h2>Por lo tanto voy a hacer alta pagina web con javascript.</h2><div id="btn"><button>Mi Biografia</button></div> <p id="parrafoBiogra" class="parrafos"></p> <p id="pregMes"></p> <div id="botones"></div><p id="resultado" class="parrafos"></p><div id="videoContainer"></div><p id="pregColor"></p><div id="botonesColor"></div><p id="resultadoColor" class="parrafos"></p><div id="imagen"></div><div id="pregComida"></div><div id="botonesComida"></div><p id="resultadoComida" class="parrafos"></p><p id="pregPes"></div><div id="botonesPes"></div><p id="resultadoPes" class="parrafos"></p><div id="reset"></div><div id="secreto"><button class="secret">?</button></div></div>';
             event.target.remove();
         }
     }
