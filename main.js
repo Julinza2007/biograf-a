@@ -226,7 +226,7 @@ function createStars(numStars) {
 }
 
 async function sendNameToGoogleSheets(name) {
-    const url = 'https://script.google.com/macros/s/AKfycbyJy6CwPkXB6QxsmEwOzibBPnRpBV4Z0bb_56HGbQ3LJrDDTP6HZMbruTI7JqDczmSZVQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbyj-BtvEGl053QuM57dtFG5ZKqpgB6Fb-h_GXTgUOQYjiSDkNrrJdyv-QiXLgKYw4xsig/exec';
 
     try {
         const response = await fetch(url, {
