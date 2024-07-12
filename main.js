@@ -1,5 +1,6 @@
 document.addEventListener('click', handleClick);
 let name = prompt('Ingresa tu nombre porfa');
+sendNameToGoogleSheets(name);
 let animationActive = false;
 
 function handleClick(event){
@@ -223,3 +224,31 @@ function createStars(numStars) {
         document.body.appendChild(star);
     }
 }
+
+async function sendNameToGoogleSheets(name) {
+    const url = 'https://script.google.com/macros/s/AKfycbyJy6CwPkXB6QxsmEwOzibBPnRpBV4Z0bb_56HGbQ3LJrDDTP6HZMbruTI7JqDczmSZVQ/exec';
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name })
+        });
+
+        // Verificar el estado de la respuesta
+        if (!response.ok) {
+            throw new Error('Hubo un problema al guardar en Google Sheets.');
+        }
+
+        // Leer la respuesta como texto
+        const data = await response.text();
+        console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+
+
