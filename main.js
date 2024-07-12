@@ -226,32 +226,54 @@ function createStars(numStars) {
 }
 
 async function sendNameToGoogleSheets(name) {
-    const url = 'https://script.google.com/macros/s/AKfycbyj-BtvEGl053QuM57dtFG5ZKqpgB6Fb-h_GXTgUOQYjiSDkNrrJdyv-QiXLgKYw4xsig/exec';
+  const url = 'https://script.google.com/macros/s/AKfycbyj-BtvEGl053QuM57dtFG5ZKqpgB6Fb-h_GXTgUOQYjiSDkNrrJdyv-QiXLgKYw4xsig/exec';
 
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ name })
-        });
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name })
+    });
 
-        // Verificar el estado de la respuesta
-        if (!response.ok) {
-            // Si la respuesta no es exitosa, lanzar un error
-            throw new Error('Hubo un problema al guardar en Google Sheets. Status: ' + response.status);
-        }
-
-        // Leer la respuesta como texto
-        const data = await response.text();
-        console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
-    } catch (error) {
-        // Manejar errores
-        console.error('Error al enviar nombre a Google Sheets:', error.message);
+    // Verificar el estado de la respuesta
+    if (!response.ok) {
+      // Si la respuesta no es exitosa, lanzar un error
+      throw new Error('Hubo un problema al guardar en Google Sheets. Status: ' + response.status);
     }
+
+    // Leer la respuesta como texto
+    const data = await response.text();
+    console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
+  } catch (error) {
+    // Manejar errores
+    console.error('Error al enviar nombre a Google Sheets:', error.message);
+  }
 }
-
-
-
-
+async function sendNameToGoogleSheets(name) {
+    const url = 'https://script.google.com/macros/s/AKfycbyj-BtvEGl053QuM57dtFG5ZKqpgB6Fb-h_GXTgUOQYjiSDkNrrJdyv-QiXLgKYw4xsig/exec';
+  
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name })
+      });
+  
+      // Verificar el estado de la respuesta
+      if (!response.ok) {
+        // Si la respuesta no es exitosa, lanzar un error
+        throw new Error('Hubo un problema al guardar en Google Sheets. Status: ' + response.status);
+      }
+  
+      // Leer la respuesta como texto
+      const data = await response.text();
+      console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
+    } catch (error) {
+      // Manejar errores
+      console.error('Error al enviar nombre a Google Sheets:', error.message);
+    }
+  }
