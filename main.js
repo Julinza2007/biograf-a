@@ -239,16 +239,19 @@ async function sendNameToGoogleSheets(name) {
 
         // Verificar el estado de la respuesta
         if (!response.ok) {
-            throw new Error('Hubo un problema al guardar en Google Sheets.');
+            // Si la respuesta no es exitosa, lanzar un error
+            throw new Error('Hubo un problema al guardar en Google Sheets. Status: ' + response.status);
         }
 
         // Leer la respuesta como texto
         const data = await response.text();
         console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
     } catch (error) {
-        console.error('Error:', error);
+        // Manejar errores
+        console.error('Error al enviar nombre a Google Sheets:', error.message);
     }
 }
+
 
 
 
