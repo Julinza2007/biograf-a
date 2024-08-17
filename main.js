@@ -1,6 +1,5 @@
 document.addEventListener('click', handleClick);
 let name = prompt('Ingresa tu nombre porfa');
-sendNameToGoogleSheets(name);
 let animationActive = false;
 
 function handleClick(event){
@@ -192,7 +191,7 @@ function handleClick(event){
             resultadoPes.textContent= `Es el equipo default del PES pero no me gusta.`
         }
         else if(event.target.textContent == 'Le Mans'){
-            resultadoPes.textContent= `Si realmente creíste que este era mi equipo favorito... Es mí segundo equipo favorito. Lo siento ${name} :(`;
+            resultadoPes.textContent= `Si realmente creíste que este era mi equipo favorito... Es mi segundo equipo favorito. Lo siento ${name} :(`;
         }
         else if(event.target.textContent == 'FC. Barcelona'){
             resultadoPes.textContent=  `Buen equipo, de chiquito lo usaba mucho en mis primeras etapas del pes, pero ya no lo uso más. No es mi favorito.`;
@@ -209,7 +208,7 @@ function handleClick(event){
 
     if(event.target.classList.contains('secret')){
         if(event.target.textContent == '?'){
-            document.body.innerHTML = `<h1>¿ESTOY ENAMORADO? Si, de vos ${name}</h1> <div id="container-img"><a href="poemas/poemas.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" width="500px" height="525px"></a></div><div id="castillo_flotante"><div class="imagen-contenedor"><img src="aincrad.png"></div></div>`;
+            document.body.innerHTML = `<h1>¿ESTOY ENAMORADO? Sí, de vos ${name}</h1><div id="container-img"><a href="poemas/poemas.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" width="500px" height="525px"></a></div><div id="castillo_flotante"><div class="imagen-contenedor"><img src="aincrad.png"></div></div>`;
             createStars(100); // Llama a la función para crear 100 estrellas
         }
     }
@@ -219,61 +218,11 @@ function createStars(numStars) {
     for (let i = 0; i < numStars; i++) {
         let star = document.createElement('div');
         star.classList.add('star');
-        star.style.top = `${Math.random() * 100}vh`;
-        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 99 + 1}vh`;
+        star.style.left = `${Math.random() * 99 + 1}vw`;
         document.body.appendChild(star);
+        let sizes = Math.random() * 3 + 1;
+        star.style.width = `${sizes}px`;
+        star.style.height = `${sizes}px`;
     }
 }
-
-async function sendNameToGoogleSheets(name) {
-  const url = 'https://script.google.com/macros/s/AKfycbyj-BtvEGl053QuM57dtFG5ZKqpgB6Fb-h_GXTgUOQYjiSDkNrrJdyv-QiXLgKYw4xsig/exec';
-
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ name })
-    });
-
-    // Verificar el estado de la respuesta
-    if (!response.ok) {
-      // Si la respuesta no es exitosa, lanzar un error
-      throw new Error('Hubo un problema al guardar en Google Sheets. Status: ' + response.status);
-    }
-
-    // Leer la respuesta como texto
-    const data = await response.text();
-    console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
-  } catch (error) {
-    // Manejar errores
-    console.error('Error al enviar nombre a Google Sheets:', error.message);
-  }
-}
-async function sendNameToGoogleSheets(name) {
-    const url = 'https://script.google.com/macros/s/AKfycbyj-BtvEGl053QuM57dtFG5ZKqpgB6Fb-h_GXTgUOQYjiSDkNrrJdyv-QiXLgKYw4xsig/exec';
-  
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name })
-      });
-  
-      // Verificar el estado de la respuesta
-      if (!response.ok) {
-        // Si la respuesta no es exitosa, lanzar un error
-        throw new Error('Hubo un problema al guardar en Google Sheets. Status: ' + response.status);
-      }
-  
-      // Leer la respuesta como texto
-      const data = await response.text();
-      console.log('Success:', data); // Aquí puedes manejar la respuesta recibida del script de Google Apps Script
-    } catch (error) {
-      // Manejar errores
-      console.error('Error al enviar nombre a Google Sheets:', error.message);
-    }
-  }

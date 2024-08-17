@@ -13,7 +13,7 @@ function handleClick(event) {
         h2.textContent = 'Aquí va mi explicación';
 
         let explicacion = document.createElement('p');
-        explicacion.textContent = 'Bueno la explicación es sencilla... Ya lo dije antes, estoy bastante inspirado, y nada va a cambiar esto definitivamente... Pero la inspiración llegó a tal punto que me estoy pasando, así que voy a parar de hacer este tipo de cosas raras. La razón de los poemas... bueno, mmmmm digamos que estoy un poco enamorado, bueno digo digamos porque la verdad que no se si es enamoramiento. En fin, como llegaste hasta acá podrías presionar la imagen de goku que está ahí abajo...';
+        explicacion.textContent = 'Bueno la explicación es sencilla... Ya lo dije antes, estoy bastante inspirado, y nada va a cambiar esto definitivamente... Pero la inspiración llegó a tal punto que me estoy pasando, así que voy a parar de hacer este tipo de cosas raras. La razón de los poemas... bueno, mmmmm digamos soy alguien muy emocional :)... En fin, como llegaste hasta acá podrías presionar la imagen de goku que está ahí abajo...';
 
         document.body.append(h1);
         document.body.append(h2);
